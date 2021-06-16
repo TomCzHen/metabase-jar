@@ -15,6 +15,8 @@ jobs:
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # Note-worthy description of changes in release
           # body: # optional
@@ -28,4 +30,5 @@ jobs:
           # prerelease: # optional
           # Newline-delimited list of path globs for asset files to upload
           files: metabase.jar
+
           
