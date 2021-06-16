@@ -1,5 +1,8 @@
 name: "Download Metabase Release Jar"
-on: [push]
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 jobs:
   download_metabase_jar:
     runs-on: ubuntu-latest
