@@ -10,7 +10,7 @@ jobs:
       - name: Download File To Workspace
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://downloads.metabase.com/v0.40.3/metabase.jar
+          file-url: https://downloads.metabase.com/v0.41.5/metabase.jar
           file-name: metabase.jar
           location: .
       - name: GH Release
