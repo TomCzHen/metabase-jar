@@ -11,9 +11,9 @@ jobs:
         uses: carlosperate/download-file-action@v1.0.3
         with:
           # file-url: https://downloads.metabase.com/v0.41.5/metabase.jar
-          file-url: https://download.nextcloud.com/server/releases/nextcloud-23.0.2.zip
+          file-url: https://artifacts.elastic.co/downloads/elasticsearch-plugins/ingest-attachment/ingest-attachment-7.10.2.zip
           # file-name: metabase.jar
-          file-name: nextcloud-23.0.2.zip
+          file-name: ingest-attachment-7.10.2.zip
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.5
@@ -32,6 +32,6 @@ jobs:
           # prerelease: # optional
           # Newline-delimited list of path globs for asset files to upload
           # files: metabase.jar
-          files: nextcloud-23.0.2.zip
+          files: ingest-attachment-7.10.2.zip
 
           
