@@ -10,28 +10,14 @@ jobs:
       - name: Download File To Workspace
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          # file-url: https://downloads.metabase.com/v0.41.5/metabase.jar
-          file-url: https://artifacts.elastic.co/downloads/elasticsearch-plugins/ingest-attachment/ingest-attachment-7.10.2.zip
-          # file-name: metabase.jar
-          file-name: ingest-attachment-7.10.2.zip
+          file-url: https://download.nextcloud.com/server/releases/nextcloud-24.0.1.tar.bz2
+          file-name: nextcloud-24.0.1.tar.bz2
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # Note-worthy description of changes in release
-          # body: # optional
-          # Path to load note-worthy description of changes in release from
-          # body_path: # optional
-          # Gives the release a custom name. Defaults to tag name
-          # name: # optional
-          # Creates a draft release. Defaults to false
-          # draft: # optional
-          # Identify the release as a prerelease. Defaults to false
-          # prerelease: # optional
-          # Newline-delimited list of path globs for asset files to upload
-          # files: metabase.jar
-          files: ingest-attachment-7.10.2.zip
+          files: nextcloud-24.0.1.tar.bz2
 
           
