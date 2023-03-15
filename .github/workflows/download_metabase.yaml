@@ -10,14 +10,14 @@ jobs:
       - name: Download File To Workspace
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://download.nextcloud.com/server/releases/nextcloud-24.0.1.tar.bz2
-          file-name: nextcloud-24.0.1.tar.bz2
+          file-url: https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
+          file-name: mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: nextcloud-24.0.1.tar.bz2
+          files: mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
 
           
