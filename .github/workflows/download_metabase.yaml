@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download File To Workspace
-        uses: carlosperate/download-file-action@v1.0.3
+        uses: carlosperate/download-file-action@v2.0.1
         with:
           file-url: https://download-core.sys.truenas.net/13.0/STABLE/U5.3/x64/TrueNAS-13.0-U5.3.iso
           file-name: TrueNAS-13.0-U5.3.iso
           location: .
       - name: GH Release
-        uses: softprops/action-gh-release@v0.1.5
+        uses: softprops/action-gh-release@v0.1.15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
