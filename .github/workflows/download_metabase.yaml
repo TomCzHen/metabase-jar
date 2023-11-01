@@ -10,14 +10,14 @@ jobs:
       - name: Download File To Workspace
         uses: carlosperate/download-file-action@v1.0.3
         with:
-          file-url: https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
-          file-name: mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
+          file-url: https://download.sys.truenas.net/TrueNAS-SCALE-Cobia/23.10.0.1/TrueNAS-SCALE-23.10.0.1.iso
+          file-name: TrueNAS-SCALE-23.10.0.1.iso
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: mongodb-win32-x86_64-2012plus-4.2.24-signed.msi
+          files: TrueNAS-SCALE-23.10.0.1.iso
 
           
