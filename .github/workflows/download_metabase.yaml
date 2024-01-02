@@ -10,14 +10,14 @@ jobs:
       - name: Download File To Workspace
         uses: carlosperate/download-file-action@v2.0.1
         with:
-          file-url: https://download-core.sys.truenas.net/13.0/STABLE/U5.3/x64/TrueNAS-13.0-U5.3.iso
-          file-name: TrueNAS-13.0-U5.3.iso
+          file-url: https://cdn.zabbix.com/zabbix/binaries/stable/6.0/6.0.25/zabbix_agent2-6.0.25-windows-amd64-openssl.msi
+          file-name: zabbix_agent2-6.0.25-windows-amd64-openssl.msi
           location: .
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.15
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: TrueNAS-13.0-U5.3.iso
+          files: zabbix_agent2-6.0.25-windows-amd64-openssl.msi
 
           
